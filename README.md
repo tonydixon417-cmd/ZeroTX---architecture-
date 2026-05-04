@@ -1,120 +1,109 @@
-Reply
-# Zero-Transmission Architecture (ZeroTX)
-## A Standard for Privacy-Native AI Applications
-*Published by Contrail Equity Strategies LLC*
-*Version 1.0 — March 28, 2026*
-*Author: Anthony Cyle Dixon*
-*Published: April 5, 2026*
+# AI Accountability Standards
+**Published by Contrail Equity Strategies LLC**
+*Author: Anthony Cyle Dixon — Springfield, Missouri*
 
 ---
 
-## Abstract
+## What This Is
 
-Zero-Transmission Architecture (ZeroTX) is a design principle for AI-adjacent applications in which all user data processing occurs on the user's device and no user content is transmitted to application servers. This paper defines the standard, describes its technical implementation, explains its implications for HIPAA compliance, and establishes a public verification test. This publication is intended to establish prior art for the ZeroTX standard and method. Reply
----
+This repository contains three independent but related standards for human-AI accountability.
 
-## The Problem With AI and Private Data
+They were developed in response to a single observation: the systems we are building to deploy AI have no black box, no external oversight layer, and no architecture that prevents sensitive data from leaving the device. Aviation solved these problems fifty years ago. AI hasn't solved them yet.
 
-Every major AI platform — ChatGPT, Claude, Gemini, Copilot — processes data on remote servers. When you type something into an AI, that text travels across the internet, lands on a server you don't control, gets processed by software you didn't write, and is stored in a database you cannot audit.
-
-For most conversations, this is acceptable.
-
-For conversations involving patients, clients, legal matters, financial strategy, or anything confidential — it is not.
-
-The industry's current answer to this problem is the Business Associate Agreement (BAA). A BAA is a legal contract where the AI vendor promises to handle your sensitive data responsibly. It is compliance by pinky promise. It requires trust in a vendor's security practices, their breach response, their employee access controls, and their legal team's interpretation of the agreement.
-
-BAAs are necessary because data leaves the device. They are a legal band-aid on a technical wound.
-
-**Zero-Transmission Architecture eliminates the wound.**
+These standards are the proposed framework for doing so.
 
 ---
 
-## What Zero-Transmission Architecture Is
-
-Zero-Transmission Architecture (ZeroTX) is a design principle for AI-adjacent applications:
-
-**All user data processing occurs on the user's device. No user content is transmitted to application servers.**
-
-That's it. One sentence. One principle. Total privacy.
-
-Under ZeroTX:
-- The application code is delivered to the browser
-- All processing runs inside the browser using local JavaScript
-- User data never leaves the device
-- The application server never receives, stores, or processes user content
-- No breach of the application server can expose user data — because the server doesn't have it
+## The Three Standards
 
 ---
 
-## How It Works — The Technical Reality
+### 1. Zero-Transmission Architecture (ZeroTX)
+**File:** `ZeroTX_Whitepaper_v2.0.md`
 
-A browser is a complete computing environment. Modern browsers can run sophisticated software locally — the same software that would traditionally run on a server.
+**The one sentence:** All user data processing occurs on the user's device. No user content is transmitted to application servers.
 
-Under ZeroTX, the application follows this flow:
+ZeroTX is a design principle for AI-adjacent applications that handle sensitive data. Under ZeroTX, the application vendor never receives user content — which means HIPAA's Business Associate rule is never triggered, no BAA is required, and a breach of the application server exposes nothing.
 
-**1. Deliver the application**
-The app code is delivered to the browser once. No user data involved.
+This is not compliance by contract. It is compliance by architecture.
 
-**2. User inputs data locally**
-The user types or pastes content. It exists only in the browser's memory on their device. Not transmitted anywhere.
+**Who it's for:** Healthcare, legal, financial, enterprise — any context where data confidentiality is required and the current answer is a legal agreement with a vendor you hope doesn't get breached.
 
-**3. Process locally**
-The application processes data using JavaScript running inside the browser. No network request is made.
-
-**4. Store locally**
-Results are saved to browser localStorage — storage that lives on the user's device. The server never receives this data.
-
-**5. User controls output**
-If the user chooses to export or share results — they make that choice explicitly. The application does not do it for them.
----
-
-## Why This Changes HIPAA Compliance
-
-HIPAA's Business Associate rule is triggered when a vendor receives Protected Health Information (PHI). "Receives" is the operative word.
-
-Under ZeroTX, the vendor never receives PHI. The data never travels to the vendor's infrastructure. The trigger is never pulled.
-
-This means:
-- No BAA is required for the ZeroTX application itself
-- The vendor cannot be held liable for a breach of data they do not hold
-- The compliance burden on the healthcare organization is dramatically reduced
-- IT security reviews are simplified — there is nothing to audit on the vendor side
-
-**This is not compliance by policy. It is compliance by architecture.**
+**Verification:** Any developer can confirm ZeroTX compliance in under two minutes using browser Developer Tools → Network tab. No trust required.
 
 ---
 
-## The Verification Standard — The Zero-Transmission Test
+### 2. The AI Black Box Standard (AIBB)
+**File:** `AIBB_Whitepaper_v1.1.md`
 
-Any ZeroTX-compliant application must be verifiable by any developer in under two minutes:
+**The one sentence:** Every significant AI output, confidence state, session boundary, and drift event must be logged in an immutable, human-readable format — and a designated human with defined authority must be responsible for that log.
 
-1. Open the application in a browser
-2. Open Developer Tools (F12) → Network tab
-3. Perform the core function of the application
-4. Observe that zero network requests carry user content during processing
+The AIBB standard is modeled on aviation's flight data recorder and crew resource management framework. AI systems operating in consequential contexts — medicine, law, finance, military, infrastructure — have no black box and no defined accountability structure. The AIBB proposes both.
 
-If user content appears in any network request during processing — the application is not ZeroTX compliant.
+Key components:
+- Four logging requirements: Output, Confidence State, Session Boundary, Drift Events
+- Tiered alert architecture: Green / Yellow / Red — modeled on aviation checklists
+- The Chief AI Accountability Officer (CAAO) — a structurally independent human role with unilateral authority to halt AI processes
+- Sidecar implementation architecture — no hardware required
+- Certification framework modeled on the Ken Austin / NIBI methodology licensing model
+
+**Who it's for:** Any organization deploying AI in contexts where a wrong answer has real consequences and no current system exists to catch the drift before it becomes the outcome.
+
+---
+
+### 3. The Loop Detector
+**File:** `Loop_Detector_Whitepaper_v1.2.md`
+
+**The one sentence:** Every system that deploys AI has the same structural vulnerability — the feedback mechanism that would catch an error lives inside the system making the error.
+
+The Loop Detector defines three accountability failure types that emerge when AI is deployed without external oversight:
+
+- **The Abdication Loop** — human judgment progressively replaced by machine output until the capacity for independent judgment atrophies
+- **The Consequence Loop** — decisions made without accountability, errors repeat without correction, no one owns the outcome
+- **The Responsibility Diffusion Loop** — accountability passed from human to human to system until it reaches something that cannot hold it and disappears
+
+Each loop type is defined by five diagnostic signatures. The paper includes a full case study of Cigna's PXDX automated denial system — 300,000 claims denied in two months at 1.2 seconds per review — as a confirmed closed-loop example with all five signatures present.
+
+The Loop Detector operates as an external nervous system — beside the AI system, not inside it. Internal monitors inherit the blind spots of the system they monitor.
+
+**Who it's for:** Education, healthcare, legal, military, enterprise compliance — any organization where humans are rubber-stamping machine output and calling it oversight.
+
+---
+
+## How They Work Together
+
+These are three distinct standards. They can be adopted independently. But they are designed to reinforce each other.
+
+**ZeroTX** solves the transmission problem — sensitive data never leaves the device.
+
+**AIBB** solves the logging problem — every significant AI decision is recorded in an immutable format with a designated human accountable for the log.
+
+**The Loop Detector** solves the oversight problem — an external diagnostic layer identifies when the accountability structure itself has failed.
+
+Together they constitute an infrastructure layer for trustworthy AI deployment. Not a product. Not a vendor promise. A set of open standards that any organization can adopt, audit, and verify independently.
 
 ---
 
 ## Prior Art Statement
 
-This document is published on April 5, 2026 by Anthony Cyle Dixon to establish public prior art for the Zero-Transmission Architecture (ZeroTX) standard and method. The concept was identified and documented on March 27, 2026. A working implementation was operational as of that date. This publication is intended to ensure the ZeroTX standard remains open and unpatentable by any party — including the author.
+This repository was first published April 4, 2026 to establish public prior art for the Zero-Transmission Architecture standard. The AIBB standard and Loop Detector standard were added May 2026.
+
+Publication is intended to ensure these standards remain open and unpatentable by any party.
 
 ---
 
-## About the Author
+## The Reference Implementation
 
-Anthony Cyle Dixon is the founder of Contrail Equity Strategies LLC. He identified the Zero-Transmission Architecture principle on March 27, 2026 while building a privacy-first AI memory tool. He is a commercial pilot, third-generation real estate investor, and builder of things that last. Springfield, Missouri.
+**Tivrex** (tivrex.app) is the first consumer-facing application built on ZeroTX architecture. It is an AI session grading and drift detection tool. Every session processed by Tivrex passes the Zero-Transmission Test — no conversation content touches Tivrex's servers. The architecture is verifiable by any developer in under two minutes.
 
 ---
 
-## Citation
+## License
 
-Dixon, A.C. (2026). *Zero-Transmission Architecture (ZeroTX): A Standard for Privacy-Native AI Applications*. Version 1.0. Contrail Equity Strategies LLC. Springfield, Missouri. Published April 5, 2026.
+The standards are open. Use them, build on them, implement them.
+Specific implementations (software, products) built on these standards are proprietary to their respective authors.
 
 ---
 
 *© 2026 Contrail Equity Strategies LLC — Springfield, Missouri*
-*This white paper may be shared freely for educational and reference purposes.*
-*The ZeroTX standard itself is open. Specific implementations are proprietary.*
+*Author: Anthony Cyle Dixon*
