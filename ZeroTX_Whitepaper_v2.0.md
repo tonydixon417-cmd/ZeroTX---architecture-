@@ -26,9 +26,9 @@ BAAs are necessary because data leaves the device. They are a legal band-aid on 
 
 The BAA model is not holding.
 
-In 2024, the HHS Office for Civil Rights recorded 725 healthcare data breaches of 500 or more records — the third consecutive year exceeding 700 large breaches. Business associates — the vendors, AI platforms, and technology partners that hold PHI under BAA agreements — accounted for 30% of breach locations while reporting only 16% of incidents. That gap between where breaches occur and where they are reported is itself a structural indictment of the current model.
+In 2024, the HHS Office for Civil Rights recorded 742 healthcare data breaches of 500 or more records — the third consecutive year exceeding 700 large breaches. Business associates — the vendors, AI platforms, and technology partners that hold PHI under BAA agreements — accounted for 30% of breach locations while reporting only 16% of incidents. That gap between where breaches occur and where they are reported is itself a structural indictment of the current model.
 
-The financial weight of this failure is not abstract. IBM's 2024 Cost of a Data Breach Report found that healthcare topped all industries for the twelfth consecutive year, with an average breach cost of $9.77 million per incident. Each compromised medical record adds approximately $398 to the bill. In 2024 alone, business associate breaches exposed over 93 million patient records — nearly three times the records exposed at healthcare providers directly.
+The financial weight of this failure is not abstract. IBM's 2024 Cost of a Data Breach Report found that healthcare topped all industries for the twelfth consecutive year, with an average breach cost of $9.77 million per incident. Globally, each compromised medical record adds approximately $398 to the bill. In 2024 alone, business associate breaches exposed over 93 million patient records — nearly three times the records exposed at healthcare providers directly.
 
 The BAA did not prevent these breaches. In most cases, the organization believed their vendor agreements were sufficient. The agreements were. The architecture was not.
 
@@ -202,7 +202,7 @@ Anthony Cyle Dixon is the founder of Contrail Equity Strategies LLC and the crea
 - Securiti.ai. *Healthcare Data Breach Cost: Key Stats.* Securiti, 2024. ($9.77M average; $398/record)
 - Sprinto. *Healthcare Data Breach Stats 2024–2025.* Sprinto.com, 2025. (93M records via business associates)
 - JMCO. *Healthcare Data Breaches Exposed Record 275 Million Patient Records.* JMCO.com, 2025. (30% of breaches at BAs; 16% reported by BAs)
-- HHS Office for Civil Rights. OCR Breach Portal. hhs.gov/hipaa. (725 large breaches in 2024)
+- HHS Office for Civil Rights. OCR Breach Portal. hhs.gov/hipaa. (742 large breaches in 2024, per updated portal data)
 
 ---
 
