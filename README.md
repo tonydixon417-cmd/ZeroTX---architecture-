@@ -20,11 +20,14 @@ These are not theoretical papers. Each standard addresses a structural problem t
 ## The Three Standards
 
 ### 1. AI Black Box Standard (AIBB)
-**File:** `AIBB_Whitepaper_v1.1.md`
+**Latest:** `AIBB_Whitepaper_v2.4.md`
+**Previous:** `AIBB_Whitepaper_v1.1.md`
 
-The AI equivalent of the aviation Flight Data Recorder. Four mandatory logging components — Output Log, Confidence State Log, Session Boundary Log, Drift Event Log — deployed as an external sidecar, never inside the system being monitored. Three compliance tiers scaled to risk level.
+The AI equivalent of the aviation Flight Data Recorder. Four mandatory logging components — Output Log, Confidence State Log, Session Boundary Log, Drift Event Log — deployed as an external sidecar, never inside the system being monitored. Three compliance tiers built on Reason's Swiss Cheese model of accident causation.
 
 **The core problem it solves:** When an AI system fails, there is currently no immutable record of what it did, what it said it was confident about, or how it drifted. The AIBB changes that.
+
+**v2.4 adds:** Swiss Cheese model as academic foundation for the tier architecture. Aviation mandate pattern (FDR → CRM → EU AI Act) as historical precedent. Component mapping table showing structural match between aviation FDR/CVR and AIBB's four logging components. Academic citation registry.
 
 **Relevant to:** EU AI Act (Aug 2, 2026), healthcare AI, legal AI, financial AI, autonomous systems.
 
@@ -40,11 +43,11 @@ An external nervous system standard for identifying, naming, and breaking accoun
 - **Abdication Loop** — human judgment atrophies through accumulated deference to AI
 - **Consequence Loop** — decisions made without accountability, errors repeat without correction
 - **Responsibility Diffusion Loop** — accountability passed until it reaches something that cannot hold it
-- **Mode Confusion Loop** *(v1.3, new)* — human and AI hold divergent models of what the AI is doing; neither flags the gap
+- **Mode Confusion Loop** *(v1.3)* — human and AI hold divergent models of what the AI is doing; neither flags the gap
 
-**v1.3 adds:** Full integration of 50 years of aviation human factors research (Salas & Maurino, 2010), Bainbridge's Ironies of Automation (1983), the Out of the Loop Performance Problem, 77% vigilance failure statistic, and the aviation Mandate Pattern as historical precedent for AI regulation.
+**v1.3 adds:** Full integration of 50 years of aviation human factors research. Bainbridge's Ironies of Automation (1983) as the loop's self-reinforcing mechanism. 77% vigilance failure statistic (Mosier et al., 1994) as empirical baseline for the Rubber Stamp Signature. Aviation Mandate Pattern as regulatory precedent.
 
-**The core problem it solves:** "A human was in the loop" is not a safety standard. It is a statement of presence, not engagement. This standard defines the difference.
+**The core problem it solves:** "A human was in the loop" is not a safety standard. It is a statement of presence, not engagement.
 
 ---
 
@@ -65,27 +68,29 @@ Zero-Transmission Architecture — all AI session processing runs client-side, i
 AIBB          →  The evidentiary layer  (logs what happened)
 Loop Detector →  The diagnostic layer  (identifies the failure pattern)
 ZeroTX        →  The sovereignty layer (ensures data never leaves the boundary)
-Tivrex        →  The user-facing tool  (session-level drift detection, tivrex.app)
+Tivrex        →  The user-facing tool  (session-level drift detection — tivrex.app)
 ```
 
 These are not competing standards. They are designed to operate as a stack — each layer handling a distinct problem, none overlapping.
 
 ---
 
-## Citation
+## Aviation as the Academic Foundation
 
-If you use these frameworks in your work, research, or organization:
+All three standards are grounded in fifty years of aviation human factors research — an industry that has already solved the human-machine accountability problem, at enormous cost, and documented the solutions rigorously.
 
-```
-Dixon, A.C. (2026). AI Black Box Standard (AIBB) v1.1.
-Dixon, A.C. (2026). The Loop Detector v1.3.
-Dixon, A.C. (2026). ZeroTX Architecture v2.0.
-Contrail Equity Strategies LLC. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
-```
+Key frameworks applied:
+- **Swiss Cheese Model** (Reason, 1990) — AIBB tier architecture
+- **Ironies of Automation** (Bainbridge, 1983) — Loop Detector self-reinforcement mechanism
+- **Out of the Loop Performance Problem** — Abdication Loop precedent
+- **CRM Closed-Loop Communication** — Tivrex Readback protocol
+- **The Mandate Pattern** — FDR/CVR → CRM → EU AI Act
+
+Aviation did not voluntarily build these systems. Crashes forced them. The AIBB, Loop Detector, and ZeroTX exist so AI does not have to learn the same lessons the same way.
 
 ---
 
-## Key Academic References (v1.3)
+## Academic References
 
 | Citation | Year | Applied To |
 |---|---|---|
@@ -94,8 +99,20 @@ Contrail Equity Strategies LLC. https://github.com/Tonydixon417-cmd/ZeroTX---arc
 | Endsley, M.R. Situation Awareness. *Human Factors*, 37(1). | 1995 | Loop Detector, ZeroTX |
 | Sarter & Woods. Mode Errors. *Human Factors*. | 1995 | Loop Detector |
 | Parasuraman & Riley. Humans and Automation. *Human Factors*, 39(2). | 1997 | Loop Detector |
+| Helmreich, R.L. On Error Management. *BMJ*, 320. | 2000 | AIBB |
 | Salas, E. & Maurino, D. *Human Factors in Aviation* (2nd Ed.). Academic Press. | 2010 | All standards |
-| Gouraud et al. Autopilot, Mind Wandering, OOTL. *Frontiers in Neuroscience*. | 2017 | Loop Detector |
+| Gouraud et al. Autopilot, Mind Wandering, OOTL. *Frontiers in Neuroscience*. | 2017 | Loop Detector, AIBB |
+
+---
+
+## Citation
+
+```
+Dixon, A.C. (2026). AI Black Box Standard (AIBB) v2.4.
+Dixon, A.C. (2026). The Loop Detector v1.3.
+Dixon, A.C. (2026). ZeroTX Architecture v2.0.
+Contrail Equity Strategies LLC. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
+```
 
 ---
 
