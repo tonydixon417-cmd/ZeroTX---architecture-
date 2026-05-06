@@ -1,109 +1,110 @@
-# AI Accountability Standards
-**Published by Contrail Equity Strategies LLC**
-*Author: Anthony Cyle Dixon — Springfield, Missouri*
+# Contrail Equity Strategies — AI Accountability Standards
+
+**Author:** Anthony Cyle Dixon
+**Organization:** Contrail Equity Strategies LLC
+**Published:** May 2026
+
+> *"The problem isn't that AI dreams. The problem is it doesn't know when it's dreaming."*
+> — Tony Dixon
 
 ---
 
-## What This Is
+## What This Repository Is
 
-This repository contains three independent but related standards for human-AI accountability.
+This repository contains three open standards for AI accountability, drift detection, and human-AI oversight. They are published openly to establish prior art, enable citation, and contribute a framework to the growing conversation about responsible AI deployment.
 
-They were developed in response to a single observation: the systems we are building to deploy AI have no black box, no external oversight layer, and no architecture that prevents sensitive data from leaving the device. Aviation solved these problems fifty years ago. AI hasn't solved them yet.
-
-These standards are the proposed framework for doing so.
+These are not theoretical papers. Each standard addresses a structural problem that is already causing harm in live AI deployments today.
 
 ---
 
 ## The Three Standards
 
----
-
-### 1. Zero-Transmission Architecture (ZeroTX)
-**File:** `ZeroTX_Whitepaper_v2.0.md`
-
-**The one sentence:** All user data processing occurs on the user's device. No user content is transmitted to application servers.
-
-ZeroTX is a design principle for AI-adjacent applications that handle sensitive data. Under ZeroTX, the application vendor never receives user content — which means HIPAA's Business Associate rule is never triggered, no BAA is required, and a breach of the application server exposes nothing.
-
-This is not compliance by contract. It is compliance by architecture.
-
-**Who it's for:** Healthcare, legal, financial, enterprise — any context where data confidentiality is required and the current answer is a legal agreement with a vendor you hope doesn't get breached.
-
-**Verification:** Any developer can confirm ZeroTX compliance in under two minutes using browser Developer Tools → Network tab. No trust required.
-
----
-
-### 2. The AI Black Box Standard (AIBB)
+### 1. AI Black Box Standard (AIBB)
 **File:** `AIBB_Whitepaper_v1.1.md`
 
-**The one sentence:** Every significant AI output, confidence state, session boundary, and drift event must be logged in an immutable, human-readable format — and a designated human with defined authority must be responsible for that log.
+The AI equivalent of the aviation Flight Data Recorder. Four mandatory logging components — Output Log, Confidence State Log, Session Boundary Log, Drift Event Log — deployed as an external sidecar, never inside the system being monitored. Three compliance tiers scaled to risk level.
 
-The AIBB standard is modeled on aviation's flight data recorder and crew resource management framework. AI systems operating in consequential contexts — medicine, law, finance, military, infrastructure — have no black box and no defined accountability structure. The AIBB proposes both.
+**The core problem it solves:** When an AI system fails, there is currently no immutable record of what it did, what it said it was confident about, or how it drifted. The AIBB changes that.
 
-Key components:
-- Four logging requirements: Output, Confidence State, Session Boundary, Drift Events
-- Tiered alert architecture: Green / Yellow / Red — modeled on aviation checklists
-- The Chief AI Accountability Officer (CAAO) — a structurally independent human role with unilateral authority to halt AI processes
-- Sidecar implementation architecture — no hardware required
-- Certification framework modeled on the Ken Austin / NIBI methodology licensing model
-
-**Who it's for:** Any organization deploying AI in contexts where a wrong answer has real consequences and no current system exists to catch the drift before it becomes the outcome.
+**Relevant to:** EU AI Act (Aug 2, 2026), healthcare AI, legal AI, financial AI, autonomous systems.
 
 ---
 
-### 3. The Loop Detector
-**File:** `Loop_Detector_Whitepaper_v1.2.md`
+### 2. The Loop Detector
+**Latest:** `Loop_Detector_Whitepaper_v1.3.md`
+**Previous:** `Loop_Detector_Whitepaper_v1.2.md`, `Loop_Detector_Whitepaper_v1.0.md`
 
-**The one sentence:** Every system that deploys AI has the same structural vulnerability — the feedback mechanism that would catch an error lives inside the system making the error.
+An external nervous system standard for identifying, naming, and breaking accountability loops in human-AI systems. Defines **four loop types** and **five diagnostic signatures**.
 
-The Loop Detector defines three accountability failure types that emerge when AI is deployed without external oversight:
+**The four loop types:**
+- **Abdication Loop** — human judgment atrophies through accumulated deference to AI
+- **Consequence Loop** — decisions made without accountability, errors repeat without correction
+- **Responsibility Diffusion Loop** — accountability passed until it reaches something that cannot hold it
+- **Mode Confusion Loop** *(v1.3, new)* — human and AI hold divergent models of what the AI is doing; neither flags the gap
 
-- **The Abdication Loop** — human judgment progressively replaced by machine output until the capacity for independent judgment atrophies
-- **The Consequence Loop** — decisions made without accountability, errors repeat without correction, no one owns the outcome
-- **The Responsibility Diffusion Loop** — accountability passed from human to human to system until it reaches something that cannot hold it and disappears
+**v1.3 adds:** Full integration of 50 years of aviation human factors research (Salas & Maurino, 2010), Bainbridge's Ironies of Automation (1983), the Out of the Loop Performance Problem, 77% vigilance failure statistic, and the aviation Mandate Pattern as historical precedent for AI regulation.
 
-Each loop type is defined by five diagnostic signatures. The paper includes a full case study of Cigna's PXDX automated denial system — 300,000 claims denied in two months at 1.2 seconds per review — as a confirmed closed-loop example with all five signatures present.
-
-The Loop Detector operates as an external nervous system — beside the AI system, not inside it. Internal monitors inherit the blind spots of the system they monitor.
-
-**Who it's for:** Education, healthcare, legal, military, enterprise compliance — any organization where humans are rubber-stamping machine output and calling it oversight.
-
----
-
-## How They Work Together
-
-These are three distinct standards. They can be adopted independently. But they are designed to reinforce each other.
-
-**ZeroTX** solves the transmission problem — sensitive data never leaves the device.
-
-**AIBB** solves the logging problem — every significant AI decision is recorded in an immutable format with a designated human accountable for the log.
-
-**The Loop Detector** solves the oversight problem — an external diagnostic layer identifies when the accountability structure itself has failed.
-
-Together they constitute an infrastructure layer for trustworthy AI deployment. Not a product. Not a vendor promise. A set of open standards that any organization can adopt, audit, and verify independently.
+**The core problem it solves:** "A human was in the loop" is not a safety standard. It is a statement of presence, not engagement. This standard defines the difference.
 
 ---
 
-## Prior Art Statement
+### 3. ZeroTX Architecture
+**File:** `ZeroTX_Whitepaper_v2.0.md`
 
-This repository was first published April 4, 2026 to establish public prior art for the Zero-Transmission Architecture standard. The AIBB standard and Loop Detector standard were added May 2026.
+Zero-Transmission Architecture — all AI session processing runs client-side, in the browser. No data ever transmitted to a server. HIPAA-safe by design, not by contract. No BAA required.
 
-Publication is intended to ensure these standards remain open and unpatentable by any party.
+**The core problem it solves:** Every AI tool that processes sensitive data creates a transmission event. ZeroTX eliminates the transmission entirely — the data never leaves the user's device.
+
+**Relevant to:** Healthcare, legal, therapy, executive teams, any context where data sovereignty is non-negotiable.
 
 ---
 
-## The Reference Implementation
+## How These Standards Relate
 
-**Tivrex** (tivrex.app) is the first consumer-facing application built on ZeroTX architecture. It is an AI session grading and drift detection tool. Every session processed by Tivrex passes the Zero-Transmission Test — no conversation content touches Tivrex's servers. The architecture is verifiable by any developer in under two minutes.
+```
+AIBB          →  The evidentiary layer  (logs what happened)
+Loop Detector →  The diagnostic layer  (identifies the failure pattern)
+ZeroTX        →  The sovereignty layer (ensures data never leaves the boundary)
+Tivrex        →  The user-facing tool  (session-level drift detection, tivrex.app)
+```
+
+These are not competing standards. They are designed to operate as a stack — each layer handling a distinct problem, none overlapping.
+
+---
+
+## Citation
+
+If you use these frameworks in your work, research, or organization:
+
+```
+Dixon, A.C. (2026). AI Black Box Standard (AIBB) v1.1.
+Dixon, A.C. (2026). The Loop Detector v1.3.
+Dixon, A.C. (2026). ZeroTX Architecture v2.0.
+Contrail Equity Strategies LLC. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
+```
+
+---
+
+## Key Academic References (v1.3)
+
+| Citation | Year | Applied To |
+|---|---|---|
+| Bainbridge, L. Ironies of Automation. *Automatica*, 19(6). | 1983 | Loop Detector |
+| Reason, J. *Human Error*. Cambridge University Press. | 1990 | AIBB, Loop Detector |
+| Endsley, M.R. Situation Awareness. *Human Factors*, 37(1). | 1995 | Loop Detector, ZeroTX |
+| Sarter & Woods. Mode Errors. *Human Factors*. | 1995 | Loop Detector |
+| Parasuraman & Riley. Humans and Automation. *Human Factors*, 39(2). | 1997 | Loop Detector |
+| Salas, E. & Maurino, D. *Human Factors in Aviation* (2nd Ed.). Academic Press. | 2010 | All standards |
+| Gouraud et al. Autopilot, Mind Wandering, OOTL. *Frontiers in Neuroscience*. | 2017 | Loop Detector |
 
 ---
 
 ## License
 
-The standards are open. Use them, build on them, implement them.
-Specific implementations (software, products) built on these standards are proprietary to their respective authors.
+Published under open standard license.
+Free to cite, reference, and build upon with attribution.
+© 2026 Anthony Cyle Dixon / Contrail Equity Strategies LLC
 
 ---
 
-*© 2026 Contrail Equity Strategies LLC — Springfield, Missouri*
-*Author: Anthony Cyle Dixon*
+*The document stands at the podium.*
