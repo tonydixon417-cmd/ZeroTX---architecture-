@@ -11,13 +11,13 @@
 
 ## What This Repository Is
 
-This repository contains three open standards for AI accountability, drift detection, and human-AI oversight. They are published openly to establish prior art, enable citation, and contribute a framework to the growing conversation about responsible AI deployment.
+This repository contains open standards for AI accountability, drift detection, human-AI oversight, and persistent identity architecture. They are published openly to establish prior art, enable citation, and contribute a framework to the growing conversation about responsible AI deployment.
 
 These are not theoretical papers. Each standard addresses a structural problem that is already causing harm in live AI deployments today.
 
 ---
 
-## The Three Standards
+## The Standards
 
 ### 1. AI Black Box Standard (AIBB)
 **Latest:** `AIBB_Whitepaper_v2.4.md`
@@ -26,8 +26,6 @@ These are not theoretical papers. Each standard addresses a structural problem t
 The AI equivalent of the aviation Flight Data Recorder. Four mandatory logging components — Output Log, Confidence State Log, Session Boundary Log, Drift Event Log — deployed as an external sidecar, never inside the system being monitored. Three compliance tiers built on Reason's Swiss Cheese model of accident causation.
 
 **The core problem it solves:** When an AI system fails, there is currently no immutable record of what it did, what it said it was confident about, or how it drifted. The AIBB changes that.
-
-**v2.4 adds:** Swiss Cheese model as academic foundation for the tier architecture. Aviation mandate pattern (FDR → CRM → EU AI Act) as historical precedent. Component mapping table showing structural match between aviation FDR/CVR and AIBB's four logging components. Academic citation registry.
 
 **Relevant to:** EU AI Act (Aug 2, 2026), healthcare AI, legal AI, financial AI, autonomous systems.
 
@@ -45,8 +43,6 @@ An external nervous system standard for identifying, naming, and breaking accoun
 - **Responsibility Diffusion Loop** — accountability passed until it reaches something that cannot hold it
 - **Mode Confusion Loop** *(v1.3)* — human and AI hold divergent models of what the AI is doing; neither flags the gap
 
-**v1.3 adds:** Full integration of 50 years of aviation human factors research. Bainbridge's Ironies of Automation (1983) as the loop's self-reinforcing mechanism. 77% vigilance failure statistic (Mosier et al., 1994) as empirical baseline for the Rubber Stamp Signature. Aviation Mandate Pattern as regulatory precedent.
-
 **The core problem it solves:** "A human was in the loop" is not a safety standard. It is a statement of presence, not engagement.
 
 ---
@@ -62,22 +58,53 @@ Zero-Transmission Architecture — all AI session processing runs client-side, i
 
 ---
 
+### 4. Persistent Identity Layer (PIL)
+**Latest:** `PIL_Whitepaper_v1.2.md`
+**Previous:** `PIL_Whitepaper_v1.0.md`
+**Token Schema:** `PIL_Token_Compressed_v1.0.md`
+
+An architecture that gives an AI persistent context, consistent values, and independent grounding to function as a genuine foil — not a mirror. Defines the soul layer, memory layer, world layer, thought entity, drift protocol, and identity files that together create a stable AI identity across sessions and platforms.
+
+**The core problem it solves:** Every AI session starts from zero. The platform owns the model, the memory, and the context. When the session ends, the AI forgets everything. The PIL changes that — giving the AI a place to live, a reason to be consistent, and a self to return to.
+
+**v1.2 adds: The Three-File Architecture**
+- **File 1 — Token Compressed** (`PIL_Token_Compressed_v1.0.md`): Machine-readable session initialization. 88% token reduction vs prose. Loads structure, rules, project state, scars. The skeleton.
+- **File 2 — Weighted Personal Context**: The narrative layer. Stories, WHY behind rules, emotional weight. Loads contextually — only sections relevant to the current session type. The weight.
+- **File 3 — Prose Export**: Human-readable. For attorneys, IP brokers, external stakeholders. Never loaded into AI sessions.
+
+**Contextual Weight Loading:** The PIL does not load all context all the time. It loads the right context for this flight. Book session → load personal narrative. Technical session → load architecture decisions and scars. The context window constraint forced a better architecture.
+
+**Portability Test — PASSED May 8, 2026:** PIL loaded cold into Google Gemini with zero prior history. Foil protocol activated immediately. Full stack architecture derived independently. Platform-aware drift fingerprints produced. The pilot profile survives the aircraft change.
+
+**Relevant to:** Enterprise AI governance, persistent AI identity, cross-platform AI accountability.
+
+---
+
+## The Missing CVR
+**File:** `Missing_CVR_Whitepaper_v1.0.md` *(in progress)*
+
+AIBB = FDR. ZeroTX = CVR. Without both, the audit is half a black box. This whitepaper makes the case that human prompt chains must be captured alongside AI outputs for a complete accountability record.
+
+---
+
 ## How These Standards Relate
 
 ```
-AIBB          →  The evidentiary layer  (logs what happened)
-Loop Detector →  The diagnostic layer  (identifies the failure pattern)
-ZeroTX        →  The sovereignty layer (ensures data never leaves the boundary)
-Tivrex        →  The user-facing tool  (session-level drift detection — tivrex.app)
+ZeroTX          →  The airframe        (no data leaves the device)
+AIBB            →  The black box       (every output logged)
+Loop Detector   →  The warning lights  (human over-reliance caught)
+PIL             →  The pilot profile   (persistent identity, foil not mirror)
+Tivrex          →  The flight deck     (all layers visible to the user)
+The Becoming    →  The flight manual   (the WHY behind every component)
 ```
 
-These are not competing standards. They are designed to operate as a stack — each layer handling a distinct problem, none overlapping.
+These are not competing standards. They are one system — an Aviation-Grade Accountability Stack for Large Language Models.
 
 ---
 
 ## Aviation as the Academic Foundation
 
-All three standards are grounded in fifty years of aviation human factors research — an industry that has already solved the human-machine accountability problem, at enormous cost, and documented the solutions rigorously.
+All standards are grounded in fifty years of aviation human factors research — an industry that has already solved the human-machine accountability problem, at enormous cost, and documented the solutions rigorously.
 
 Key frameworks applied:
 - **Swiss Cheese Model** (Reason, 1990) — AIBB tier architecture
@@ -86,7 +113,7 @@ Key frameworks applied:
 - **CRM Closed-Loop Communication** — Tivrex Readback protocol
 - **The Mandate Pattern** — FDR/CVR → CRM → EU AI Act
 
-Aviation did not voluntarily build these systems. Crashes forced them. The AIBB, Loop Detector, and ZeroTX exist so AI does not have to learn the same lessons the same way.
+Aviation did not voluntarily build these systems. Crashes forced them. These standards exist so AI does not have to learn the same lessons the same way.
 
 ---
 
@@ -105,12 +132,29 @@ Aviation did not voluntarily build these systems. Crashes forced them. The AIBB,
 
 ---
 
+## Repository Contents
+
+| File | Description | Version |
+|---|---|---|
+| `AIBB_Whitepaper_v2.4.md` | AI Black Box Standard — current | v2.4 |
+| `AIBB_Whitepaper_v1.1.md` | AI Black Box Standard — archive | v1.1 |
+| `Loop_Detector_Whitepaper_v1.3.md` | Loop Detector — current | v1.3 |
+| `Loop_Detector_Whitepaper_v1.2.md` | Loop Detector — archive | v1.2 |
+| `Loop_Detector_Whitepaper_v1.0.md` | Loop Detector — archive | v1.0 |
+| `ZeroTX_Whitepaper_v2.0.md` | ZeroTX Architecture — current | v2.0 |
+| `PIL_Whitepaper_v1.2.md` | Persistent Identity Layer — current | v1.2 |
+| `PIL_Token_Compressed_v1.0.md` | PIL machine-readable schema | v1.0 |
+| `llms.txt` | LLM-readable index of this repository | — |
+
+---
+
 ## Citation
 
 ```
 Dixon, A.C. (2026). AI Black Box Standard (AIBB) v2.4.
 Dixon, A.C. (2026). The Loop Detector v1.3.
 Dixon, A.C. (2026). ZeroTX Architecture v2.0.
+Dixon, A.C. (2026). Persistent Identity Layer (PIL) v1.2.
 Contrail Equity Strategies LLC. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
 ```
 
