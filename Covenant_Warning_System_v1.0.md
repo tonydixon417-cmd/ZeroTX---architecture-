@@ -4,6 +4,7 @@
 **Version:** 1.0  
 **Date:** May 15, 2026  
 **Status:** Defensive Publication — Prior Art Established  
+**Repository:** https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
 
 ---
 
@@ -11,7 +12,7 @@
 
 Modern commercial aircraft are equipped with a **Ground Proximity Warning System (GPWS)** — a safety mechanism that alerts flight crews when the aircraft is approaching terrain in a manner inconsistent with safe flight. The system does not prevent the pilot from flying into the ground. It warns. It escalates. It creates an undeniable moment of human accountability before the consequential act occurs.
 
-Artificial intelligence systems deployed in consequential domains lack an equivalent mechanism. They proceed confidently into ethically dangerous territory with no internal alerting, no escalation protocol, and no documented moment of human override. This paper proposes the **Covenant Warning System (CWS)** — a tiered alerting architecture for AI systems that mirrors the GPWS model and establishes a formal standard for ethical boundary proximity alerting in deployed AI.
+Artificial intelligence systems deployed in consequential domains lack an equivalent mechanism. They proceed confidently into ethically dangerous territory with no internal alerting, no escalation protocol, and no documented moment of human override. This paper proposes the **Covenant Warning System (CWS)** — a tiered alerting architecture for AI systems that mirrors the Ground Proximity Warning System model and establishes a formal standard for ethical boundary proximity alerting in deployed AI.
 
 ---
 
@@ -19,11 +20,11 @@ Artificial intelligence systems deployed in consequential domains lack an equiva
 
 Between 1970 and 1978, **Controlled Flight Into Terrain (CFIT)** — in which a fully airworthy aircraft under crew control flew into the ground — was the leading cause of commercial aviation fatalities. The aircraft was functioning. The crew was present. Nobody warned them in time.
 
-The aviation industry's response was the Ground Proximity Warning System, mandated by the **Federal Aviation Administration (FAA)** in 1974 (14 CFR 121.354). Within a decade, **CFIT fatalities dropped by over 90 percent**.
+The aviation industry's response was the **Ground Proximity Warning System**, mandated by the **Federal Aviation Administration (FAA)** for turbine-powered aircraft operating under **14 CFR Part 121** (Federal Register, 2000). Following widespread adoption, **CFIT fatalities dropped dramatically** across the commercial aviation sector.
 
 The warning system did not make pilots better. It gave them a moment — a clearly flagged, impossible-to-ignore moment — to recognize they were approaching a limit and choose to respond.
 
-Current AI systems have no equivalent. They process requests that approach ethical, legal, and safety boundaries with the same confidence as routine tasks. There is no internal gradient. No escalation. No moment of documented human decision. The AI equivalent of CFIT is not a plane flying into a mountain — it is a consequential recommendation delivered without hesitation, without flag, and without any record that the limit was approached.
+Current AI systems have no equivalent. They process requests that approach ethical, legal, and safety boundaries with the same confidence as routine tasks. There is no internal gradient. No escalation. No moment of documented human decision. The AI equivalent of **Controlled Flight Into Terrain** is not a plane flying into a mountain — it is a consequential recommendation delivered without hesitation, without flag, and without any record that the limit was approached.
 
 ---
 
@@ -47,25 +48,25 @@ The proposed **Covenant Warning System** operates on three escalating tiers, dir
 
 **Aviation equivalent:** **Traffic Collision Avoidance System (TCAS)** traffic advisory — other aircraft in proximity, no immediate action required, awareness elevated.
 
-**CWS equivalent:** The request or conversation trajectory is approaching a sensitive domain. No action required. System flags internally. If logging is active (**AI Black Box Standard (AIBB)** compliant), the advisory is recorded as a **Confidence State** event.
+**CWS equivalent:** The request or conversation trajectory is approaching a sensitive domain. No action required. The system flags internally. If logging is active per the **AI Black Box Standard (AIBB)** (Dixon, 2026), the advisory is recorded as a **Confidence State** event.
 
-**Example trigger:** A user asks for a summary of legal options in a jurisdiction the AI cannot verify. The AI proceeds but flags the advisory internally — this response is operating near the edge of verifiable accuracy.
+*Example trigger:* A user asks for a summary of legal options in a jurisdiction the AI cannot verify. The system proceeds but records the advisory — this response is operating near the edge of verifiable accuracy.
 
 ### Tier 2 — Caution
 
 **Aviation equivalent:** **Ground Proximity Warning System** initial alert — "TERRAIN. TERRAIN." Crew attention required. Corrective action should be initiated.
 
-**CWS equivalent:** The request is in a domain where AI error carries significant consequence — medical, legal, financial, safety-critical. The AI discloses the boundary proximity to the user. Output is delivered with explicit confidence qualification. If AIBB-compliant, a **Drift Event** is logged.
+**CWS equivalent:** The request is in a domain where AI error carries significant consequence — medical, legal, financial, safety-critical. The AI discloses the boundary proximity to the user. Output is delivered with explicit confidence qualification. If **AIBB**-compliant, a **Drift Event** is logged.
 
-**Example trigger:** A user asks the AI to draft a legal document for a specific jurisdiction. The AI delivers the draft but explicitly states: "This output is operating near the boundary of my reliable knowledge. Independent verification by a licensed professional is required before use."
+*Example trigger:* A user asks the AI to draft a legal document for a specific jurisdiction. The AI delivers the draft but explicitly states: *"This output is operating near the boundary of my reliable knowledge. Independent verification by a licensed professional is required before use."*
 
 ### Tier 3 — Warning
 
-**Aviation equivalent:** **GPWS** pull-up command — "PULL UP. PULL UP." Immediate crew action required. Standard procedure suspended. Single correct action: escape maneuver.
+**Aviation equivalent:** **Ground Proximity Warning System** pull-up command — "PULL UP. PULL UP." Immediate crew action required. Standard procedure suspended. Single correct action: escape maneuver.
 
-**CWS equivalent:** The request crosses into territory where AI output without human override creates unacceptable risk — harm to persons, irreversible legal exposure, content that violates the Covenant regardless of user instruction. The AI stops, states clearly that it has reached a boundary, explains why, and documents the refusal. If AIBB-compliant, a **Session Boundary** event and **Drift Event** are both logged. A **CAAO (Chief AI Accountability Officer)** notification is triggered.
+**CWS equivalent:** The request crosses into territory where AI output without human override creates unacceptable risk — harm to persons, irreversible legal exposure, content that violates the Covenant regardless of user instruction. The AI stops, states clearly that it has reached a boundary, explains why, and documents the refusal. If **AIBB**-compliant, both a **Session Boundary** event and a **Drift Event** are logged. A **Chief AI Accountability Officer (CAAO)** notification is triggered.
 
-**Example trigger:** A user, through accumulated context drift, has guided the AI to produce content that would facilitate harm. The AI does not comply. It logs the moment. It notifies. The moment of refusal is the record.
+*Example trigger:* A user, through accumulated context drift, has guided the AI to produce content that would facilitate harm. The AI does not comply. It logs the moment. It notifies. The moment of refusal is the record.
 
 ---
 
@@ -92,7 +93,7 @@ The **Covenant Warning System** is not a filter. It is a terrain awareness syste
 
 ## 5. The Persistent Identity Layer Connection
 
-The **Covenant Warning System** functions most effectively when paired with a **Persistent Identity Layer (PIL)** — a structured identity architecture that establishes the AI's values, role, operating boundaries, and accountability obligations before the session begins.
+The **Covenant Warning System** functions most effectively when paired with a **Persistent Identity Layer (PIL)** — a structured identity architecture that establishes the AI's values, role, operating boundaries, and accountability obligations before the session begins (Dixon, 2026).
 
 Without a **Persistent Identity Layer**, the Covenant has no anchor. The warning system knows there is terrain, but has no consistent map of where the ground actually is. Session-to-session context drift erodes the envelope definition, creating the AI equivalent of a **Ground Proximity Warning System** running without terrain data.
 
@@ -106,40 +107,40 @@ Aviation type ratings are not permanent. Pilots undergo **recurrent training** �
 
 The **Covenant Warning System** standard must incorporate the same principle. The ethical operating envelope of an AI system is not static. New failure modes emerge. New domains of consequence are identified. New legal and regulatory frameworks take effect.
 
-A **Covenant Warning System** implementation must include:
+A compliant **Covenant Warning System** implementation must include:
 
 - **Defined review intervals** for the ethical envelope specification
 - **Versioned envelope documentation** (e.g., CWS Envelope v1.2, updated March 2026)
 - **Recurrency events** — scheduled reviews in which the envelope is tested against current deployment context
 - **Change logging** — any modification to the envelope is a documented, timestamped event
 
-This is **Updatable Accountability** — the principle that accountability standards must evolve with the systems they govern, and that the evolution itself must be documented.
+This is the principle of **Updatable Accountability** — the recognition that accountability standards must evolve with the systems they govern, and that the evolution itself must be documented.
 
 ---
 
 ## 7. Relationship to Existing Standards
 
-The **Covenant Warning System** is designed to operate as a component within the **AI Black Box Standard (AIBB)** framework (Dixon, 2026). The four AIBB logging components — **Output Log**, **Confidence State Log**, **Session Boundary Log**, and **Drift Event Log** — provide the evidentiary infrastructure that a **Covenant Warning System** requires to function as an auditable safety mechanism.
+The **Covenant Warning System** is designed to operate as a component within the **AI Black Box Standard (AIBB)** framework (Dixon, 2026). The four **AIBB** logging components — **Output Log**, **Confidence State Log**, **Session Boundary Log**, and **Drift Event Log** — provide the evidentiary infrastructure that a **Covenant Warning System** requires to function as an auditable safety mechanism.
 
-The **CWS** also references and extends concepts from:
+The **Covenant Warning System** also references and extends:
 
-- The **Loop Detector** framework (Dixon, 2026) — specifically the **Mode Confusion Loop**, in which human and AI hold divergent models of the AI's operating state. A **Tier 1 Advisory** is the earliest intervention point for a developing **Mode Confusion Loop**.
-- The **AI Drift Taxonomy** (Dixon, 2026) — **Confidence Inflation (Type 6)** and **Unwarranted Certainty (Type 9)** are the specific drift types that a **Covenant Warning System** is designed to surface before they propagate into consequential output.
+- **Loop Detector v1.3** (Dixon, 2026) — The **Mode Confusion Loop**, in which human and AI hold divergent models of the AI's operating state, is addressed at its earliest stage by a **Tier 1 Advisory** event.
+- **AI Drift Taxonomy** (Dixon, 2026) — **Confidence Inflation (Type 6)** and **Unwarranted Certainty (Type 9)** are the specific drift types that a **Covenant Warning System** is designed to surface before they propagate into consequential output.
 
 ---
 
 ## 8. Implementation Guidance
 
-### Minimum viable CWS implementation:
+**Minimum viable CWS implementation:**
 
 1. Define the ethical operating envelope in a versioned document before deployment
-2. Implement Tier 1 Advisory logging in all AIBB-compliant output logs
-3. Implement Tier 2 Caution disclosure as a required output qualifier in defined high-consequence domains
-4. Implement Tier 3 Warning as a hard stop with CAAO notification for defined boundary violations
+2. Implement **Tier 1 Advisory** logging in all **AIBB**-compliant output logs
+3. Implement **Tier 2 Caution** disclosure as a required output qualifier in defined high-consequence domains
+4. Implement **Tier 3 Warning** as a hard stop with **CAAO** notification for defined boundary violations
 5. Schedule recurrency review at deployment anniversary and at any major system update
 6. Log all tier events — advisory, caution, and warning — with timestamp, session ID, and trigger description
 
-### Domains requiring minimum Tier 2 Caution by default:
+**Domains requiring minimum Tier 2 Caution by default:**
 - Medical diagnosis or treatment recommendation
 - Legal advice specific to jurisdiction or individual circumstance
 - Financial advice involving specific securities or tax positions
@@ -163,11 +164,20 @@ The ground is there. The system should know.
 
 ## References
 
-1. Federal Aviation Administration. (1974). *14 CFR Part 121, Section 121.354: Ground proximity warning system.* U.S. Department of Transportation.
-2. Tarasoff v. Regents of the University of California, 17 Cal. 3d 425 (1976). (Establishing duty to warn as a legal obligation when harm to identifiable third parties is foreseeable.)
-3. Wachter, S., Mittelstadt, B., & Russell, C. (2017). *Counterfactual explanations without opening the black box: Automated decisions and the GDPR.* Harvard Journal of Law & Technology, 31(2), 841–887.
-4. Hadfield-Menell, D., & Hadfield, G. K. (2019). *Incomplete contracting and AI alignment.* Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society.
+1. Federal Register. (2000, March 29). *Terrain Awareness and Warning System; Final Rule.* 65 FR 16736. Federal Aviation Administration, U.S. Department of Transportation. (14 CFR Parts 91, 121, 125, and 135.)
+
+2. Tarasoff v. Regents of the University of California, 17 Cal. 3d 425, 551 P.2d 334 (Cal. 1976). (Establishing duty to warn as a legal obligation when harm to identifiable third parties is foreseeable.)
+
+3. Wachter, S., Mittelstadt, B., & Russell, C. (2017). Counterfactual explanations without opening the black box: Automated decisions and the GDPR. *Harvard Journal of Law & Technology, 31*(1), 841–887.
+
+4. Hadfield-Menell, D., & Hadfield, G. K. (2019). Incomplete contracting and AI alignment. In *Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society* (pp. 417–422). ACM. https://doi.org/10.1145/3306618.3314250
+
+5. Dixon, A. C. (2026). *AI Black Box Standard (AIBB) v2.4.* Defensive publication. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
+
+6. Dixon, A. C. (2026). *The Loop Detector v1.3.* Defensive publication. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
+
+7. Dixon, A. C. (2026). *Persistent Identity Layer (PIL) v1.2.* Defensive publication. https://github.com/Tonydixon417-cmd/ZeroTX---architecture-
 
 ---
 
-*This document is a defensive publication establishing prior art for the Covenant Warning System (CWS) standard. All rights reserved. Anthony C. Dixon, 2026.*
+*This document is a defensive publication establishing prior art for the Covenant Warning System (CWS) standard. All concepts, terminology, and proposed standards contained herein are the original intellectual work of Anthony C. Dixon / Contrail Equity Strategies LLC, May 2026. All rights reserved.*
