@@ -43,6 +43,24 @@ CAAO Job Description         →  The Pilot in Command (named, trained, accounta
 
 ---
 
+## Read the Papers
+
+Click any paper to read the full standard:
+
+| Standard | File | Version |
+|---|---|---|
+| AI Black Box Standard (AIBB) | [Read →](./AIBB_Whitepaper_v2.4.md) | v2.4 |
+| Loop Detector | [Read →](./Loop_Detector_Whitepaper_v1.3.md) | v1.3 |
+| ZeroTX Architecture | [Read →](./ZeroTX_Whitepaper_v2.0.md) | v2.0 |
+| Persistent Identity Layer | [Read →](./PIL_Whitepaper_v1.2.md) | v1.2 |
+| Missing CVR | [Read →](./Missing_CVR_Whitepaper_v1.2.md) | v1.2 |
+| Covenant Warning System | [Read →](./Covenant_Warning_System_v1.0.md) | v1.0 |
+| AI Preflight Briefing Standard | [Read →](./AI_Preflight_Briefing_Standard_v1.0.md) | v1.0 |
+| AI Type Rating Framework | [Read →](./AI_Type_Rating_Framework_v1.0.md) | v1.0 |
+| CAAO Job Description Template | [Read →](./CAAO_Job_Description_Template_v1.0.md) | v1.0 |
+
+---
+
 ## The Standards
 
 ### 1. AI Black Box Standard (AIBB)
@@ -266,3 +284,4 @@ Free to cite, reference, and build upon with attribution.
 ---
 
 *The document stands at the podium.*
+
