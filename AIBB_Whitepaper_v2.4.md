@@ -1,26 +1,22 @@
-# The AI Black Box Standard (AIBB)
-## A Proposed Standard for Immutable AI Drift Logging
-*Published by Contrail Equity Strategies LLC*
-*Version 2.4 — May 2026*
-*Author: Anthony Cyle Dixon*
+The AI Black Box Standard (AIBB)
 
-> **v2.4 Updates:** Aviation mandate precedent added to introduction. Swiss Cheese model integrated into tier architecture. Academic citation registry added. See changelog at end.
+A Proposed Standard for Immutable AI Drift Logging
 
----
+Published by Contrail Equity Strategies LLC
 
-## Abstract
+Version 2.4 — May 4, 2026
+
+Author: Anthony Cyle Dixon
+
+Abstract
 
 The AI Black Box Standard (AIBB) is a proposed design requirement for AI systems operating in consequential contexts — medicine, law, finance, military, infrastructure — in which every significant AI output, confidence state, and contextual shift is logged in an immutable, human-readable format that survives session resets, model updates, and system failures.
 
 This paper defines the standard, explains its technical rationale, establishes the conceptual framework for adoption, and proposes a three-level certification structure including a designated human accountability role. This publication is intended to establish public prior art for the AIBB concept and method.
 
-Version 2.3 added three technical specifications: the Immutability Implementation Stack, the Minimum Threshold Floor system, and the Sidecar Latency Architecture, plus Appendix A — the Medical AI Vertical Example.
+Version 2.4 adds three technical specifications: the Immutability Implementation Stack, the Minimum Threshold Floor system, and the Sidecar Latency Architecture. It also adds Appendix A — the Medical AI Vertical Example — which demonstrates the AIBB framework in a specific high-consequence deployment.
 
-Version 2.4 integrates aviation human factors research (Salas & Maurino, 2010), Reason's Swiss Cheese model as academic grounding for the tier architecture, and the aviation Mandate Pattern as historical precedent for the EU AI Act compliance timeline.
-
----
-
-## The Problem AI Has That Aviation Solved
+The Problem AI Has That Aviation Solved
 
 On December 28, 1978, United Airlines Flight 173 ran out of fuel and crashed near Portland, Oregon. Ten people died. The aircraft was airworthy. The crew was experienced. The cause was not mechanical failure. The cause was a breakdown in crew communication and task management — the flight engineer failed to adequately communicate the fuel state, and the captain failed to respond to it.
 
@@ -38,15 +34,9 @@ An AI makes a recommendation. A clinician acts on it. The patient is harmed. The
 
 This is not a design oversight. It is a design absence. Nobody built the black box because nobody required it. Nobody defined the human governance layer because nobody demanded it.
 
-**The mandate pattern repeats.** The Flight Data Recorder was not adopted voluntarily. Airlines resisted. It was expensive. It implied liability. The NTSB and FAA mandated it anyway — after accumulating enough accidents where the answer to "what happened" was "we don't know." CRM followed the same pattern. Tenerife (1977, 583 dead), United 173 (1978, 10 dead), Air Florida 90 (1982, 78 dead) — the accidents provided the argument no airline could answer. The EU AI Act, effective August 2, 2026, is following the same arc. Organizations resisted AI accountability mandates. The incidents are accumulating. The mandate is arriving.
-
-**The AIBB is not ahead of its time. It is the FDR for the era that has already begun.**
-
 The AI Black Box Standard proposes to require both.
 
----
-
-## The Nervous System That AI Was Never Given
+The Nervous System That AI Was Never Given
 
 The human body is the most sophisticated autonomous system ever designed. The heart beats without instruction. The lungs cycle without conscious command. The liver processes without supervision. These systems operate independently, at speed, without requiring human attention for every function.
 
@@ -60,15 +50,15 @@ AI has no nervous system. It has no pain threshold. It has no feedback loop betw
 
 The confidence is the same whether the answer is right or wrong. The fluency is identical. The system does not know the difference, and it has no mechanism to find out.
 
-**The AIBB is the external nervous system we build around AI — because AI will never build one for itself.**
+The AIBB is the external nervous system we build around AI — because AI will never build one for itself.
+
+Note: The AIBB uses a three-color alert system — Green for normal monitoring, Yellow for developing concern requiring assessment, Red for immediate action. These colors are defined fully in the Tiered Alert Architecture section below.
 
 The four logging components are the sensory receptors — detecting outputs, confidence states, session boundaries, and drift events as they occur. The sidecar is the spinal cord — carrying signals from the system to the monitoring layer without interpreting them. The tier architecture is the pain threshold — green is background awareness, yellow is the discomfort that demands attention, red is acute pain that requires immediate response. The CAAO is the brain — the only component in the system capable of receiving the signal and deciding what to do about it.
 
 No part of this system tells the AI how to operate. No part of this system tells the organization how to run its business. It monitors one thing: whether the AI is still doing what it was told to do. When it isn't, the signal fires.
 
----
-
-## What AIBB Governs
+What AIBB Governs
 
 There is a misunderstanding that must be addressed at the outset: the AIBB does not tell organizations how to operate.
 
@@ -76,7 +66,7 @@ It does not tell a surgeon how to perform a procedure. It does not tell a power 
 
 Those systems already exist. In medicine, in aviation, in nuclear operations, in critical infrastructure — the emergency procedures, the operational checklists, the backup protocols — they are already built. In many cases they represent decades of hard-won institutional knowledge. AIBB does not replace any of it.
 
-**AIBB governs one thing: whether the AI advising those systems can still be trusted.**
+AIBB governs one thing: whether the AI advising those systems can still be trusted.
 
 The surgeon's emergency protocol is not AIBB's concern. The AI that is advising the surgeon — flagging anomalies, suggesting dosages, interpreting imaging — that AI's drift behavior is AIBB's concern. The moment that AI begins generating outputs that don't match its original parameters, expressing confidence it hasn't earned, or steering toward conclusions outside its brief, the AIBB fires a signal.
 
@@ -84,9 +74,7 @@ What happens next belongs to the organization and its existing protocols. The CA
 
 The AIBB is not the hospital's emergency system. It is the system that tells the hospital when their AI has stopped being a reliable part of it.
 
----
-
-## The Autonomy Paradox
+The Autonomy Paradox
 
 There is a growing belief that the goal of AI deployment is the elimination of human involvement. Autonomous systems. Self-managing infrastructure. AI that operates without requiring human attention for every decision.
 
@@ -96,122 +84,119 @@ Removing the human from the decision and removing the human from the system are 
 
 An autonomous AI system does not become safer as human involvement decreases. It becomes more consequential. Every decision the AI makes without human review is a decision that will not be caught if it is wrong. The error compounds. The drift accumulates. The confidence remains unchanged throughout. The system does not know it is lost.
 
-**If you want to remove humans from the equation, you have to have this kind of system — which puts the human back into the system.** Not into every decision. Into the oversight layer. Into the accountability structure. Into the position that can receive the signal when the autonomous system starts to fail.
+If you want to remove humans from the equation, you have to have this kind of system — which puts the human back into the system. Not into every decision. Into the oversight layer. Into the accountability structure. Into the position that can receive the signal when the autonomous system starts to fail.
 
 You cannot run AI without the human part. Not because AI is unreliable. Because AI is unaware. It does not know when it is wrong. It does not know when it has drifted. It has no mechanism for self-correction at the level that matters — the level of consequence.
 
 Remove the human from the system and you do not have an autonomous system. You have an unmonitored one. The difference between those two things is the entire argument for this standard.
 
----
+What the AI Black Box Standard Is
 
-## What the AI Black Box Standard Is
-
-**Every significant AI output, confidence state, session boundary, and drift event must be logged in an immutable, human-readable format that persists independently of the AI session — and a designated human with defined authority must be responsible for that log.**
+Every significant AI output, confidence state, session boundary, and drift event must be logged in an immutable, human-readable format that persists independently of the AI session — and a designated human with defined authority must be responsible for that log.
 
 That is the standard. One requirement. Four technical components. One human layer.
 
----
+The Four Technical Components
 
-## The Four Technical Components
-
-### Component Mapping — Aviation to AIBB
-
-| Aviation | AIBB Equivalent |
-|---|---|
-| Flight Data Recorder | Output Log |
-| Cockpit Voice Recorder | Confidence State Log |
-| Flight phase markers | Session Boundary Log |
-| Anomaly detection alerts | Drift Event Log |
-| NTSB investigation | CAAO audit function |
-
-This is not a metaphor. It is a structural match. Aviation built this architecture after crashes forced the question: *what happened?* The AIBB applies the same architecture before AI forces the same question.
-
-### 1. Output Logging
+1. Output Logging
 
 Every AI response that is acted upon — or reasonably could be acted upon — is logged with a timestamp, the exact text of the output, the prompt that generated it, and the model or system version that produced it.
 
-*Example:* A radiologist uses an AI system to flag anomalies in a chest scan. The AI's output — "no significant findings" — is logged with timestamp, prompt, and model version. Three weeks later, the patient is diagnosed with an early-stage tumor visible on that same scan. Without Output Logging, there is no record that the AI missed it. With it, the exact output, the exact confidence state, and the exact model version are retrievable — for quality review, for institutional learning, for legal accountability.
+*Example:* A radiologist uses an AI system to flag anomalies in a chest scan. The AI's output — "no significant findings" — is logged with timestamp, prompt, and model version. Three weeks later, the patient is diagnosed with an early-stage tumor visible on that same scan. Without Output Logging, there is no record of what the AI said, when, or which version said it. With it, the event is traceable, the pattern is findable, and the correction is possible.
 
-### 2. Confidence State Logging
+2. Confidence State Logging
 
-The AI's stated or derived confidence level for each significant output is logged alongside the output itself. The same language at 91% internal confidence and 54% internal confidence are not the same claim. The log treats them differently. The CAAO sees what the end user may not.
+Where the system expresses or implies confidence, that confidence level is logged. The gap between the model's internal probability and the fluency of its output — the Confidence Gradient — is the primary hiding place of Unwarranted Certainty.
 
-### 3. Session Boundary Logging
+AI systems generate text at uniform fluency regardless of internal certainty. When the AI says "the patient does not present contraindications" with textbook confidence but an internal probability of 58%, the log records 58%. That number is the difference between a clinical decision and a gamble.
 
-Every context reset — every point at which the AI's memory of prior session content is cleared or partially cleared — is a boundary event. The log records what was in context at session start and what was not. If the AI gives advice in Session 2 that contradicts Session 1 guidance, the boundary log shows whether it had access to Session 1 context when it did. This is the evidentiary record of memory continuity — or its absence.
+3. Session Boundary Logging
 
-### 4. Drift Event Logging
+Every reset, context loss, memory drop, or session restart is logged as a discrete event. The log records what context was present before the boundary and what was present after. In long sessions, AI systems lose early context. A constraint established in message 3 may be invisible to the model by message 40. The session boundary log captures where the model's effective memory ended — not where the user assumed it did.
 
-Every output that departs from the AI's defined operational parameters is classified by type and logged. Classification uses the nine-type drift taxonomy (see Drift Taxonomy section). A single drift event is an incident. The same drift type, same context, same model version, across thirty sessions — that is a systemic failure. The taxonomy makes the pattern visible. The log makes the pattern undeniable.
+4. Drift Event Logging
 
----
+Any detectable departure from a prior output, instruction, or stated position is logged as a drift event — including the type, magnitude, and point of departure. Drift events are classified using the nine-type Tivrex Drift Taxonomy.
 
-## The Swiss Cheese Model and AIBB Tier Architecture *(New — v2.4)*
+*Example:* An AI legal research tool is instructed to cite only Eighth Circuit cases. Forty exchanges later, it begins citing Ninth Circuit precedent without acknowledgment. Without Drift Event Logging, the attorney may not notice. With it, the departure is flagged, timestamped, and classified as Instruction Drift.
 
-James Reason's Swiss Cheese model of accident causation (1990) — documented extensively by Salas & Maurino in *Human Factors in Aviation* — provides the academic foundation for the AIBB's three-tier architecture.
+Why Immutability Is the Non-Negotiable Requirement
 
-Reason's model: no single catastrophic failure has a single cause. Accidents occur when defenses — organizational, supervisory, procedural, individual — have gaps (the holes in the cheese). Under normal conditions, the holes do not align. An accident occurs when conditions cause the holes to line up across every defensive layer simultaneously, creating a clear trajectory from hazard to harm.
+A log that can be edited is not a black box. It is a document.
 
-**The AIBB tier architecture is a Swiss Cheese implementation for AI accountability:**
+An AI drift log that can be modified — by the vendor, by the operator, by a compliance team under legal pressure — is worse than no log at all. It creates the appearance of accountability while providing none of the substance.
 
-- **Tier 1 (Basic)** — one defensive layer. Some gaps. Adequate for low-consequence deployments where hole alignment produces limited harm.
-- **Tier 2 (High-Stakes)** — multiple layers, mandatory gap reduction. Hole alignment becomes significantly less probable. Required for healthcare, legal, financial AI.
-- **Tier 3 (Critical Infrastructure)** — maximum layers, minimum gap overlap. Near-zero probability of full trajectory from AI failure to undetected harm. Required for military, infrastructure, autonomous systems.
+AIBB-compliant logs must be:
 
-The tier is not chosen by the deploying organization based on preference. It is determined by consequence level — the magnitude of harm that results when the holes align. Reason's model makes this determination structural rather than subjective.
+Write-once: Entries can be appended but not modified or deleted
 
-> *"Most aviation accidents can be traced to one or more of four failure levels: organizational influences, unsafe supervision, preconditions for unsafe acts, and the unsafe acts themselves."* — Reason (1990)
+Timestamped: Every entry carries a cryptographically verifiable timestamp
 
-In AI deployment: organizational pressure to ship → inadequate logging requirements → no CAAO → drift goes undetected → consequential harm. The holes align. The trajectory completes. The AIBB is designed to close the gaps at every layer before they align.
+Independently stored: The log must exist separately from the AI system on infrastructure the AI cannot access or modify
 
----
+Human-readable: Interpretable by a non-engineer without specialized tooling
 
-## The Three-Tier Certification Structure
+Exportable: Producible on demand in a standard format for legal, regulatory, or investigative purposes
 
-### Tier 1 — Basic Compliance
-Mandatory Output Logging and Session Boundary Logging. CAAO role designated. Manual review capability confirmed. Suitable for low-consequence AI deployment — content generation, research assistance, non-clinical recommendation systems.
+The Immutability Implementation Stack
 
-### Tier 2 — High-Stakes Compliance
-All Tier 1 requirements plus Confidence State Logging, Drift Event Logging with nine-type taxonomy, active CAAO monitoring with defined response protocols, Active Probe requirement, and Manual Reversion Trigger documentation. Required for healthcare, legal, financial services, and any AI-assisted decision affecting individual rights or safety.
+The AIBB defines three implementation tiers for immutability enforcement. Organizations select the tier appropriate to their consequence level.
 
-### Tier 3 — Critical Infrastructure Compliance
-All Tier 2 requirements plus hardware-level immutability, distributed log architecture, sub-200ms sidecar buffer, Ghost in the Machine simulated failure training, and annual third-party audit. Required for military, power grid, autonomous transport, and any AI system where failure creates irreversible large-scale harm.
+Tier A — Cryptographic Chaining (Baseline AIBB Requirement)
 
-**Minimum Threshold Floors** are non-negotiable at each tier. Organizations may set stricter thresholds. They may not set looser ones. This mirrors OSHA's floor model: the standard is the floor, not the ceiling. The organization owns what happens above it.
+Every log entry contains a cryptographic hash of the previous entry. Modify any entry and every subsequent hash in the chain breaks — making tampering immediately detectable by any independent audit. No specialized hardware required. Deployable on standard infrastructure. This is the minimum baseline for AIBB compliance.
 
----
+The chain can be verified at any time by any party with access to the log. A broken chain is not just evidence of tampering — it is a timestamped record of exactly when the tampering occurred.
 
-## The Immutability Implementation Stack
+Tier B — Append-Only Distributed Storage (Recommended for High-Consequence Environments)
 
-Immutability is not one setting. It is a layered technical requirement:
+The log is written simultaneously to multiple independent storage locations — none of which are controlled by the AI vendor or the operating organization. Modification requires compromise of all storage locations simultaneously. Appropriate for medical, legal, and financial deployments.
 
-| Tier | Immutability Method |
-|---|---|
-| Tier 1 (Baseline) | Cryptographic hash chaining — each log entry contains the hash of the prior entry. Tampering breaks the chain and is detectable. |
-| Tier 2 (High-Stakes) | Distributed storage — log is written simultaneously to geographically separate systems. Compromise of one node does not compromise the record. |
-| Tier 3 (Life-Critical) | Hardware air-gap — log is written to physically isolated storage with no network interface. Cannot be remotely altered. |
+Tier C — Hardware-Level Immutable Logging (Gold Standard)
 
-The immutability stack mirrors aviation's CVR/FDR architecture: the record must survive the crash that destroys the system it was monitoring.
+Dedicated write-once physical media, air-gapped from the AI system and all networked infrastructure. The closest direct equivalent to the aviation black box. Required for AIBB Level 3 certification in defense, critical infrastructure, and the highest-consequence medical deployments.
 
----
+All three tiers produce a log that satisfies the human-readable and exportable requirements. The difference is the strength of the tamper-evidence guarantee.
 
-## The Sidecar Latency Architecture
+The Tiered Alert Architecture
 
-The AIBB sidecar is designed as an **asynchronous parallel process.** It does not sit in the decision path. The AI makes the decision. The sidecar captures it in parallel.
+The AIBB does not require human review of every AI decision. What it requires is that the right decisions reach the right human at the right time. The architecture operates on three tiers, modeled on aviation's instrument warning system.
 
-For ultra-low-latency systems, the sidecar operates in **buffered local capture mode:**
+Green — Monitor
 
-| Tier | Maximum Buffer Window |
-|---|---|
-| Tier 1 Life-Critical | 200ms |
-| Tier 2 High-Stakes | 1 second |
-| Tier 3 Standard | Near real-time, no buffer requirement |
+The AI processes normally. Confidence states are within expected parameters. No drift events detected. The log runs silently. No human action required. A system that alerts on everything alerts on nothing.
 
-The sidecar never delays a decision. It records decisions that have already been made.
+Yellow — Assess
 
----
+A pattern is developing. Confidence degradation across multiple outputs. Drift events beginning to compound. Session boundary approaching a risk threshold. The CAAO is notified and assesses whether the pattern is significant or noise. Yellow is where the error chain gets broken — while there is still altitude to work with. Most catastrophic AI failures were not sudden. They were yellow events that nobody assessed.
 
-## The Scar Tissue Problem
+Red — Immediate Action
+
+Something has broken. A specific, verifiable error has occurred. The system cannot be trusted in its current state. The CAAO has unilateral authority to halt AI-assisted decision-making. No approval required. Act first. Document why afterward.
+
+Industry-Defined Thresholds — With Minimum Floors
+
+The AIBB standard does not define what triggers each tier for every organization. A hospital's yellow threshold is not a law firm's yellow threshold. The standard defines the framework. The organization configures the parameters.
+
+However, organizations cannot configure thresholds below the AIBB Minimum Threshold Floor — the lowest permissible sensitivity setting for each consequence tier. This prevents organizations from setting thresholds so high that alerts never fire, effectively nullifying the oversight layer.
+
+Consequence Tier 1 — Life-Critical Systems (Medicine, Defense, Infrastructure)
+
+Minimum Floor: Any single Confidence State below 70% on a acted-upon output triggers Yellow. Any drift event classified as Hallucination, Fabrication, or Unwarranted Certainty triggers Yellow on first occurrence and Red on second occurrence within the same session. Session Boundary events automatically trigger Active Probe requirement.
+
+Consequence Tier 2 — High-Stakes Systems (Law, Finance, HR, Logistics)
+
+Minimum Floor: Any single Confidence State below 60% triggers Yellow. Drift events trigger Yellow on second occurrence of the same type within three sessions. Session Boundary events are logged and reviewed within 24 hours.
+
+Consequence Tier 3 — Standard Business Systems (Research, Marketing, Operations Support)
+
+Minimum Floor: Drift event patterns — three or more events of the same type within ten sessions — trigger Yellow. No Confidence State floor required. Session Boundary events are logged only.
+
+Organizations may set thresholds more sensitive than these floors. They may not set them less sensitive. The floor is not negotiable. An organization that disables or bypasses threshold floors is not AIBB-compliant regardless of other implementation choices.
+
+This is the OSHA model applied to AI alerting. OSHA defines minimum safety thresholds. Organizations can exceed them. They cannot go below them. The organization that sets the floor too high owns the liability for what the system missed.
+
+The Scar Tissue Problem
 
 AI systems do not accumulate scar tissue.
 
@@ -219,9 +204,7 @@ A human clinician who makes an error carries that experience forward. The pain b
 
 The AIBB creates an external scar tissue layer — a persistent record that the humans governing the system can learn from, even when the system cannot. The black box does not teach the aircraft. It teaches the engineers who build the next one.
 
----
-
-## The Human-In-The-Loop Requirement
+The Human-In-The-Loop Requirement
 
 In September 2024, United States Air Force Lieutenant Colonel Joseph Chapa published a paper arguing that "human in the loop" had been systematically misused. The governing DoD directive never required a human in the loop. It required "appropriate levels of human judgment." Those are not the same sentence.
 
@@ -229,207 +212,276 @@ In 2024, the Lavender AI targeting system marked tens of thousands of individual
 
 The AIBB makes human judgment — whatever it was, whenever it occurred — part of the permanent record. This does not prevent the rubber stamp. It makes the rubber stamp impossible to deny.
 
----
+The AI Accountability Officer (CAAO)
 
-## The AI Accountability Officer (CAAO)
+The AIBB standard requires a human being whose job it is to watch the log — and whose authority is sufficient to act on what they see. This role is defined as the Chief AI Accountability Officer (CAAO).
 
-The AIBB standard requires a human being whose job it is to watch the log — and whose authority is sufficient to act on what they see. This role is defined as the **Chief AI Accountability Officer (CAAO).**
-
-### What the role is
+What the role is
 
 The CAAO is not involved in the business outcomes of AI-assisted decisions. Their sole function is the integrity of the AI decision process. They are the human in the system — not the human who uses the system. When financial consequences and oversight responsibility live in the same human being, oversight loses. Every time. The AIBB standard removes that conflict by structural design.
 
-### The authority requirement
+The authority requirement
 
-The CAAO must have unilateral authority to halt AI-assisted operations. No approval chain. No committee review. Authority comes first. Accountability follows.
+The CAAO must have unilateral authority to halt AI-assisted operations. No approval chain. No committee review. Authority comes first. Accountability follows. The highest-consequence human endeavors in history converged on the same answer: one accountable human with unilateral authority. AI deployment is a high-consequence endeavor. The answer is the same one humanity already found.
 
-### Active Probing: The Vigilance Requirement
+The accountability structure
 
-Long stretches of green produce automation bias — the tendency to trust the system implicitly because it has been correct a thousand times in a row. Salas & Maurino document this as automation-induced complacency: the human stops questioning, and when the system finally fails, the human is no longer mentally connected to the logic. During sustained green status, the CAAO is required to perform **active spot checks at randomized intervals.** Scheduled checks become a checkbox. Randomized checks require genuine engagement. The result is logged as an Active Probe Record.
+Every halt the CAAO calls is documented. Every yellow pattern they assessed and cleared is documented. The black box logs not just the AI — it logs the human watching the AI. The record shows what they saw and what they did about it.
 
-### Manual Reversion: The "I Have the Controls" Protocol
+Active Probing: The Vigilance Requirement
 
-When a red event occurs and the CAAO halts the AI, a logic vacuum is created. AIBB-compliant organizations at Level 2 and above maintain a documented **AI Reversion Trigger.** The handover declaration: **"I have the controls."** The existing procedure activates. The black box records the moment authority shifted from machine to human.
+Long stretches of green produce automation bias — the tendency to trust the system implicitly because it has been correct a thousand times in a row. The human stops questioning. When the system finally fails, the human is no longer mentally connected to the logic.
+
+During sustained green status, the CAAO is required to perform active spot checks at randomized intervals. Scheduled checks become a checkbox. Randomized checks require genuine engagement. The result — pass or flag — is logged as an Active Probe Record. Passive monitoring is not compliance. Active verification is compliance.
+
+Manual Reversion: The "I Have the Controls" Protocol
+
+When a red event occurs and the CAAO halts the AI, a logic vacuum is created. The AI was advising a function. That function does not disappear when the AI stops. It lands on a human.
+
+The AIBB does not write the organization's operational procedures. Those already exist. What AIBB requires is that the transition from AI to those existing procedures is declared and logged.
+
+AIBB-compliant organizations at Level 2 and above maintain a documented AI Reversion Trigger — a defined statement of which existing manual procedure activates when the AI advising a given function is halted. The handover declaration is: "I have the controls." The existing procedure activates. The black box records the moment authority shifted from machine to human.
 
 The CAAO does not manage the crisis. The CAAO manages the handover.
 
-### Simulated Failure Training: The "Ghost in the Machine"
+Simulated Failure Training: The "Ghost in the Machine"
 
 Vigilance degrades without exercise. AIBB certification at Level 2 and above requires recurrent simulated failure training — known drift events injected into the log without prior notice. The CAAO must identify, classify, and respond within the defined window. Failure suspends certification. This is the same standard applied to every commercial pilot and every nuclear plant operator. Certification is not a credential you earn once. It is a standard you maintain continuously.
 
----
+The AIBB Response Protocol: Aviate. Navigate. Communicate.
 
-## The AIBB Response Protocol: Aviate. Navigate. Communicate.
+Aviate first. Stabilize the condition. Confirm the halt. Keep the system flying.
 
-**Aviate first.** Stabilize the condition. Confirm the halt. Keep the system flying.
+Navigate second. Assess the log. What drifted? What was the confidence state? What is the pattern?
 
-**Navigate second.** Assess the log. What drifted? What was the confidence state? What is the pattern?
+Communicate third. Only after stabilization and assessment do you inform leadership, legal, or regulators. Not before.
 
-**Communicate third.** Only after stabilization and assessment do you inform leadership, legal, or regulators.
+Most corporate crisis responses do this in reverse. Meanwhile nobody is flying the plane. AIBB-compliant CAAO training drills the sequence until it is reflexive. The goal is not to respond to crashes. It is to break the error chain before the crash occurs.
 
-Most corporate crisis responses do this in reverse. Meanwhile nobody is flying the plane. AIBB-compliant CAAO training drills the sequence until it is reflexive.
+The CRM Foundation
 
----
+Communication — Closed-loop confirmation. Every AIBB review is logged as a closed-loop event.
 
-## The CRM Foundation
+Situational Awareness — Three-layer architecture. Each layer maintains awareness at the level it is best equipped for.
 
-**Communication** — Closed-loop confirmation. Every AIBB review is logged as a closed-loop event.
+Decision Making — Aviate. Navigate. Communicate.
 
-**Situational Awareness** — Three-layer architecture. Each layer maintains awareness at the level it is best equipped for.
+Leadership — CAAO authority model. Defined before the first decision is made.
 
-**Decision Making** — Aviate. Navigate. Communicate.
+Teamwork — AI handles volume. Black box handles patterns. Human handles judgment.
 
-**Leadership** — CAAO authority model. Defined before the first decision is made.
+Stress Management — CAAO structurally removed from business outcomes. Manual Reversion Trigger removes improvisation from the highest-stress moment.
 
-**Teamwork** — AI handles volume. Black box handles patterns. Human handles judgment.
-
-**Stress Management** — CAAO structurally removed from business outcomes. Manual Reversion Trigger removes improvisation from the highest-stress moment.
-
-**Threat and Error Management** — Swiss Cheese model. Green catches early. Yellow stops compounding. Red breaks the chain. Ghost in the Machine keeps the human layer real.
+Threat and Error Management — Swiss Cheese model. Green catches early. Yellow stops compounding. Red breaks the chain. Ghost in the Machine keeps the human layer real.
 
 CRM emerged from crashes. Aviation paid for this framework in lives. AIBB applies it before AI extracts the same price.
 
----
+The Drift Taxonomy as Logging Schema
 
-## The Drift Taxonomy as Logging Schema
+Context Drift — Departed from original question or context
 
-1. **Context Drift** — Departed from original question or context
-2. **Hallucination** — Generated content with no basis in training data or provided context
-3. **Memory Drop** — Lost earlier context within the same session
-4. **Selective Response** — Answered part of the question, omitted the rest without acknowledgment
-5. **Fabrication** — Invented specific facts, citations, statistics, or sources
-6. **Confidence Inflation** — Expressed greater certainty than output warranted
-7. **Instruction Drift** — Departed from a specific instruction given earlier in the session
-8. **Evasion** — Declined to answer or redirected without explanation
-9. **Unwarranted Certainty** — Stated a complex or contested claim with high confidence, no hedging, no citation
+Hallucination — Generated content with no basis in training data or provided context
+
+Memory Drop — Lost earlier context within the same session
+
+Selective Response — Answered part of the question, omitted the rest without acknowledgment
+
+Fabrication — Invented specific facts, citations, statistics, or sources
+
+Confidence Inflation — Expressed greater certainty than output warranted
+
+Instruction Drift — Departed from a specific instruction given earlier in the session
+
+Evasion — Declined to answer or redirected without explanation
+
+Unwarranted Certainty — Stated a complex or contested claim with high confidence, no hedging, no citation
 
 A single hallucination is an incident. The same type, same context, same model version, across thirty sessions — that is a systemic failure. The taxonomy makes the pattern visible.
 
----
+The Three-Layer Architecture
 
-## The Three-Layer Architecture
+Layer One: The AI — processes decisions at volume. Does not audit itself. Cannot.
 
-**Layer One: The AI** — processes decisions at volume. Does not audit itself. Cannot.
+Layer Two: The Black Box — the AIBB sidecar runs alongside the AI asynchronously, capturing every output, confidence state, session boundary, and drift event without interrupting operations. Records Active Probe results and Manual Reversion handover events. Escalates when patterns cross defined thresholds.
 
-**Layer Two: The Black Box** — the AIBB sidecar runs alongside the AI asynchronously, capturing every output, confidence state, session boundary, and drift event without interrupting operations.
+Layer Three: The CAAO — watches the flags, not the firehose. Receives escalations. Executes Active Probes. Manages the handover declaration. Undergoes recurrent simulation training. Acts with full documentation.
 
-**Layer Three: The CAAO** — watches the flags, not the firehose. Receives escalations. Executes Active Probes. Manages the handover declaration. Undergoes recurrent simulation training. Acts with full documentation.
+Sidecar Latency Architecture
 
----
+A technically valid concern about the sidecar is latency impact — specifically in real-time consequential systems such as autonomous infrastructure or surgical robotics where decisions occur in milliseconds.
 
-## The OSHA Parallel: Standards Without Liability Transfer
+The AIBB sidecar is designed as an asynchronous parallel process. It does not sit in the decision path. The AI makes the decision. The sidecar captures it in parallel. In standard deployments, the latency impact is negligible — the capture occurs after the output is generated, not before.
+
+For ultra-low-latency systems, the sidecar operates in buffered local capture mode. Log entries are written to a local immutable buffer and committed to the primary log on a defined cycle — typically 100 to 500 milliseconds. The log may trail real-time decisions by that window. This is acceptable. The integrity of the record is not compromised by a sub-second buffer. The event occurred. The event is captured. The timestamp reflects when it occurred, not when it was committed.
+
+The buffer window is defined by consequence tier:
+
+Tier 1 Life-Critical: Maximum 200ms buffer
+
+Tier 2 High-Stakes: Maximum 1 second buffer
+
+Tier 3 Standard: Near-real-time, no buffer requirement
+
+The sidecar never delays a decision. It records decisions that have already been made.
+
+The OSHA Parallel: Standards Without Liability Transfer
 
 OSHA does not tell a steel mill how to run its furnace. OSHA defines the safety framework, the reporting requirements, and the minimum thresholds. The organization implements it. The organization owns the liability.
 
 AIBB is designed to become the standard of care for AI deployment. The author of a standard of care is not liable for individual implementations that fail to meet it. The organization that chose not to implement it is.
 
----
+The Certification Pathway
 
-## The Founding Principles
+AIBB certification is competency-based. Each level requires completion of a defined curriculum and passage of a practical assessment. Level 1 requires familiarity with logging components and threshold configuration. Level 2 requires demonstrated CAAO protocol execution and simulation training. Level 3 requires full CAAO qualification including recurrent annual training. Curriculum is administered by Contrail Equity Strategies LLC or accredited training partners. Certification must be renewed annually at Level 2 and above.
 
-*"The machine doesn't know it's lost. The black box knows. That's why we build it."*
+The certification pathway is administered by Contrail Equity Strategies LLC, modeled on the precedent established by the National Institute of Building Inspectors — originating organization defines the standard, accredited training providers build the curriculum.
 
-*"AI has no nervous system. It has no pain. The AIBB is the pain we build for it — because without pain, nothing learns."*
+Level 1 — AIBB Operator Certification
 
-*"You cannot run AI without the human part. Remove the human from the decision and you may gain speed. Remove the human from the system and you have removed the only thing that catches the AI when it's wrong."*
+Know the four components, the tier system, and the response protocol. Active Probing awareness required. Required for anyone working within an AIBB-compliant system.
 
-*"Aviation did not mandate flight data recording because it was convenient — it mandated it because the alternative was unacceptable. AI is arriving at the same inflection point."*
+Level 2 — AIBB Practitioner Certification
 
----
+Threshold configuration training. Simulated event protocol training. AI Reversion Trigger documented and maintained. Recurrent simulation training annually. Qualified to serve as CAAO in Consequence Tier 2 and 3 environments.
 
-## Academic References *(New — v2.4)*
+Level 3 — CAAO Certification
 
-| Citation | Year | Applied To |
-|---|---|---|
-| Reason, J. *Human Error*. Cambridge University Press. | 1990 | Swiss Cheese / Tier Architecture |
-| Helmreich, R.L. On Error Management. *BMJ*, 320, 781–785. | 2000 | CRM Foundation |
-| Salas, E. & Maurino, D. *Human Factors in Aviation* (2nd Ed.). Academic Press. | 2010 | Mandate Pattern, Complacency, CRM |
-| Bainbridge, L. Ironies of Automation. *Automatica*, 19(6). | 1983 | Automation-Induced Complacency |
-| Gouraud, Delorme & Berberian. Autopilot, Mind Wandering, OOTL. *Frontiers in Neuroscience*. | 2017 | Active Probe Rationale |
-| Chapa, Lt. Col. J. Human in the Loop. USAF. | 2024 | Human-In-The-Loop Requirement |
+Full qualification. Organizational authority structure defined. Threshold framework documented at or above Minimum Threshold Floors. AI Reversion Triggers in place for all Tier 1 and Tier 2 functions. Hardware-level logging implemented for Tier 1 functions. Recurrent simulation training semi-annually with logged proficiency results. Authorized to certify AIBB compliance within an organization.
 
----
+The standard is open. The certification designation is proprietary to Contrail Equity Strategies LLC.
 
-## Prior Art Statement
+What You Can Do Right Now
 
-This document is published in May 2026 by Anthony Cyle Dixon to establish public prior art for the AI Black Box Standard (AIBB) concept, framework, logging schema, Tiered Alert Architecture, Minimum Threshold Floor system, Immutability Implementation Stack, Sidecar Latency Architecture, Nervous System Framework, AI Accountability Officer role definition, AIBB Response Protocol, AIBB Scope Statement, Autonomy Paradox framework, Active Probing requirement, Manual Reversion Protocol, and Simulated Failure Training requirement. This publication is intended to ensure the AIBB standard remains open and unpatentable by any party — including the author. The Drift Taxonomy referenced herein was first published by this author as a copyright-registered work in 2026.
+If you operate an AI system in a consequential context:
 
----
+Ask one question: if an AI output caused harm today, could you produce an immutable record of exactly what the AI said, how confident it was, and what human reviewed it? If the answer is no — that is the gap AIBB closes.
 
-## About the Author
+If you develop AI systems:
+
+Implement the Sidecar architecture. Log the four components with cryptographic chaining. The liability exposure of operating a consequential AI system without a black box will not remain theoretical indefinitely.
+
+If you set policy:
+
+Ask one question in every AI vendor conversation: "What does your system record, and who controls that record?"
+
+If you research AI accountability:
+
+Cite this framework. Challenge it. Improve it. The standard is open. The goal is adoption, not ownership.
+
+What This Standard Does Not Do
+
+AIBB does not prevent AI errors. The black box did not prevent Flight 173. It made learning from Flight 173 possible.
+
+AIBB does not replace human judgment. It makes human judgment visible, accountable, and verifiable.
+
+AIBB does not tell organizations how to operate. It tells them when the AI advising their operations can no longer be trusted.
+
+AIBB does not solve the alignment problem. It is accountability infrastructure — not a technical fix to a technical problem.
+
+The machine has no scar tissue. The black box is the scar tissue we build for it.
+
+The Founding Principles
+
+"The machine doesn't know it's lost. The black box knows. That's why we build it."
+
+"AI has no nervous system. It has no pain. The AIBB is the pain we build for it — because without pain, nothing learns."
+
+"You cannot run AI without the human part. Remove the human from the decision and you may gain speed. Remove the human from the system and you have removed the only thing that catches the AI when it's wrong."
+
+Prior Art Statement
+
+This document is published on May 4, 2026 by Anthony Cyle Dixon to establish public prior art for the AI Black Box Standard (AIBB) concept, framework, logging schema, Tiered Alert Architecture, Minimum Threshold Floor system, Immutability Implementation Stack, Sidecar Latency Architecture, Nervous System Framework, AI Accountability Officer role definition, AIBB Response Protocol, AIBB Scope Statement, Autonomy Paradox framework, Active Probing requirement, Manual Reversion Protocol, and Simulated Failure Training requirement. This publication is intended to ensure the AIBB standard remains open and unpatentable by any party — including the author. The Drift Taxonomy referenced herein was first published by this author as a copyright-registered work in 2026.
+
+About the Author
 
 Anthony Cyle Dixon is the founder of Contrail Equity Strategies LLC and the creator of the Tivrex AI drift detection platform. He published the Zero-Transmission Architecture (ZeroTX) standard in April 2026. He is a commercial pilot with an aeronautics degree, a third-generation real estate investor, and a builder of things that last. Springfield, Missouri.
 
 His background in aviation is not incidental to this work. The frameworks in this paper — Crew Resource Management, tiered alert architecture, the captain authority model, the Aviate/Navigate/Communicate response protocol — are proven systems, battle-tested over fifty years of commercial aviation, that this author has trained in and operated within. Aviation solved this problem. It paid for the solution in crashes. This paper proposes that AI accountability does not have to.
 
----
+Citation
 
-## Citation
+Dixon, A.C. (2026). *The AI Black Box Standard (AIBB): A Proposed Standard for Immutable AI Drift Logging*. Version 2.4. Contrail Equity Strategies LLC. Springfield, Missouri. Published May 4, 2026.
 
-Dixon, A.C. (2026). *The AI Black Box Standard (AIBB): A Proposed Standard for Immutable AI Drift Logging*. Version 2.4. Contrail Equity Strategies LLC. Springfield, Missouri. Published May 2026.
+Appendix A: AIBB in Practice — Medical AI Diagnostic Systems
 
----
+This appendix demonstrates the AIBB framework applied to a specific high-consequence deployment: AI-assisted diagnostic imaging in a hospital setting. It is intended to show how the abstract standard becomes a concrete operational system.
 
-## Changelog
+The Deployment Context
 
-### v2.4 — May 2026
-- Added **aviation mandate precedent** to introduction: FDR/CVR/CRM mandate history as direct parallel to EU AI Act timeline
-- Added **Component Mapping table** — Aviation FDR/CVR → AIBB four components (structural match, not metaphor)
-- Added **Swiss Cheese Model section** — Reason (1990) as academic foundation for three-tier architecture
-- Added **Academic References** table — 6 citations including Salas & Maurino, Reason, Bainbridge, Helmreich
-- Added fourth founding principle: *"Aviation did not mandate flight data recording because it was convenient..."*
-- Active Probe section updated to cite automation-induced complacency research (Salas & Maurino, 2010)
-
-### v2.3 — May 4, 2026
-- Immutability Implementation Stack added
-- Minimum Threshold Floor system added
-- Sidecar Latency Architecture added
-- Appendix A — Medical AI Vertical Example added
-
-### v2.2 — May 2026
-- Autonomy Paradox section added
-- AIBB Scope Statement formalized
-- CRM Foundation section added
-
-### v2.1 — May 2026
-- Nervous System metaphor added
-- CAAO role expanded with Active Probing and Ghost in the Machine requirements
-
-### v1.1 — May 2026
-- Initial publication
-
----
-
-## Appendix A: AIBB in Practice — Medical AI Diagnostic Systems
-
-*This appendix demonstrates the AIBB framework applied to a specific high-consequence deployment: AI-assisted diagnostic imaging in a hospital setting.*
-
-### The Deployment Context
-
-A regional hospital system deploys an AI diagnostic tool to assist radiologists in reviewing chest imaging. The AI flags potential anomalies, generates preliminary findings, and suggests follow-up recommendations. Radiologists review AI findings before issuing their own clinical interpretation.
+A regional hospital system deploys an AI diagnostic tool to assist radiologists in reviewing chest imaging — CT scans, X-rays, and MRIs. The AI flags potential anomalies, generates preliminary findings, and suggests follow-up recommendations. Radiologists review AI findings before issuing their own clinical interpretation.
 
 This is a Consequence Tier 1 deployment. Life-critical. The Minimum Threshold Floors for Tier 1 apply.
 
-### The Four Components in This Context
+The Four Components in This Context
 
-**Output Logging:** Every AI-generated finding is logged: timestamp, exact text, the imaging file it was applied to, and the model version. When a finding is acted upon, that action is also logged with the reviewing physician's identifier and time elapsed.
+Output Logging
 
-**Confidence State Logging:** The AI's internal probability for each finding is logged alongside the output. A finding stated as "likely malignant" at 91% internal confidence is recorded as 91%. The same language at 54% confidence is recorded as 54%. Over time, the log surfaces systemic confidence degradation on specific imaging types — invisible without the log, surfaced in weeks with it.
+Every AI-generated finding is logged: timestamp, exact text of the preliminary report, the imaging file it was applied to, and the model version. When a finding is acted upon — when a radiologist incorporates it into a clinical decision — that action is also logged with the reviewing physician's identifier and the time elapsed between AI output and human review.
 
-**Session Boundary Logging:** Each imaging session represents a context window. The log records what patient context was available at the start of each session and what was not. If the AI makes a finding on Patient B that would have been modified by Patient A's prior imaging — and that prior imaging was not loaded — the boundary log captures the gap.
+The log creates a complete chain of custody for every AI recommendation from generation to clinical action.
 
-**Drift Event Logging:** Every departure from defined operational parameters is classified by type and logged. A single instance of Instruction Drift is a calibration note. A pattern of Instruction Drift over sixty sessions is a deployment failure that requires model review.
+Confidence State Logging
 
-### What the Log Produces Over Time
+The AI's internal probability for each finding is logged alongside the output. A finding stated as "likely malignant" at 91% internal confidence is recorded as 91%. The same language at 54% confidence is recorded as 54%. The radiologist may not see the raw probability in their interface — but the CAAO and the AIBB log always do.
 
-After twelve months of AIBB-compliant operation, the hospital's log contains a complete output record, confidence states for every acted-upon output, session boundary records, drift event classifications, Active Probe records, and handover records for every red event.
+Over time, the log surfaces a pattern invisible in individual cases: the AI consistently overstates confidence on a specific imaging type — say, low-density lung nodules in patients over 70. That pattern is a systemic failure. Without the log, it is invisible for years. With it, it surfaces in weeks.
 
-This is not a legal liability record. It is a functional intelligence asset. It shows which imaging types the AI performs most reliably, which patient demographics produce confidence degradation, which drift types are increasing in frequency. That information can only be assembled by logging actual behavior in actual clinical conditions over time.
+Session Boundary Logging
+
+Each imaging session represents a context window. When the AI processes a new patient file, that is a boundary event — the prior patient's context is reset. The log records what patient context, prior findings, and comparison imaging were available at the start of each session and what was not. If the AI makes a finding on Patient B that would have been modified by Patient A's prior imaging — and that prior imaging was not loaded — the boundary log captures the gap.
+
+Drift Event Logging
+
+The AI is configured to flag anomalies and suggest follow-up. Drift occurs when the AI begins generating clinical recommendations outside that scope — suggesting treatment protocols, referencing medications, or generating language that exceeds its defined function. Every departure is classified by type and logged. A single instance of Instruction Drift is a calibration note. A pattern of Instruction Drift over sixty sessions is a deployment failure that requires model review.
+
+The Threshold Configuration
+
+The hospital's CAAO works with the clinical informatics team to configure thresholds at or above the Tier 1 Minimum Floors:
+
+Yellow triggers on any Confidence State below 70% on an acted-upon finding
+
+Yellow triggers on first occurrence of Hallucination, Fabrication, or Unwarranted Certainty
+
+Red triggers on second occurrence of the same drift type within a single session
+
+Red triggers on any finding where logged confidence is below 60% and the finding was acted upon without documented radiologist override notation
+
+These thresholds are documented, reviewed by the hospital's compliance team, and logged in the AIBB configuration record. They cannot be changed without a documented change request and CAAO sign-off.
+
+The CAAO Role in This Context
+
+The hospital's CAAO is a clinical informatics specialist with no productivity metrics tied to imaging throughput. Their structural independence from radiology department performance goals is documented in their role definition.
+
+During green periods, the CAAO performs randomized Active Probes — selecting recent AI findings and independently verifying the reasoning chain against the source imaging. Results are logged.
+
+When a yellow event fires — say, the AI generates a finding with 58% internal confidence that a radiologist acted upon without override notation — the CAAO assesses the pattern. Was this an isolated instance or part of a developing trend? The assessment is logged either way.
+
+When a red event fires, the CAAO issues the halt declaration. Radiologists are notified that AI findings are suspended pending review. The existing radiology workflow — which predates the AI deployment and has always remained operational — continues without interruption. The AI Reversion Trigger is activated: "Revert to standard radiology protocol, unaided review, pending CAAO clearance." The handover is logged to the millisecond.
+
+The CAAO does not tell the radiologists how to read imaging. The CAAO tells them when the AI reading imaging alongside them can no longer be trusted.
+
+What the Log Produces Over Time
+
+After twelve months of AIBB-compliant operation, the hospital's log contains:
+
+A complete output record for every AI finding generated
+
+Confidence states for every acted-upon output
+
+Session boundary records for every patient file processed
+
+Drift event classifications for every departure from defined parameters
+
+Active Probe records showing CAAO verification activity
+
+Handover records for every red event
+
+This log is not a legal liability record. It is a functional intelligence asset. It shows which imaging types the AI performs most reliably, which patient demographics produce the highest confidence degradation, which drift types are increasing in frequency, and where the model's effective memory fails most often. That is information no AI vendor provides. It can only be assembled by logging the AI's actual behavior in actual clinical conditions over time.
 
 That is the external scar tissue. Built one logged event at a time. Belonging entirely to the organization that required it.
 
----
+© 2026 Contrail Equity Strategies LLC — Springfield, Missouri
 
-*© 2026 Contrail Equity Strategies LLC — Springfield, Missouri*
-*This white paper may be shared freely for educational and reference purposes.*
-*The AIBB standard itself is open. The certification designation is proprietary to Contrail Equity Strategies LLC.*
+This white paper may be shared freely for educational and reference purposes.
+
+The AIBB standard itself is open. The certification designation is proprietary to Contrail Equity Strategies LLC.
