@@ -18,6 +18,11 @@ This paper defines the standard, explains its technical rationale, establishes t
 
 Version 2.5 adds three technical specifications: the Immutability Implementation Stack, the Minimum Threshold Floor system, and the Sidecar Latency Architecture. It also adds Appendix A — the Medical AI Vertical Example — which demonstrates the AIBB framework in a specific high-consequence deployment.
 
+
+## External Validation
+
+On May 26, 2026, Anthropic co-founder Chris Olah addressed the Vatican as part of Pope Leo XIV's encyclical *Magnifica Humanitas* — the first papal teaching document devoted entirely to artificial intelligence. Speaking from inside one of the world's leading AI laboratories, Olah stated plainly: "Every frontier AI lab operates inside a set of incentives and constraints that can sometimes conflict with doing the right thing." Pope Leo XIV called for "robust legal frameworks, independent oversight, and informed users," declaring it "not permissible" to entrust irreversible decisions to AI systems without human accountability. The AIBB standard exists precisely to provide that accountability layer — the mechanism that reattaches consequence to decision when commercial pressure and public interest diverge.
+
 The Problem AI Has That Aviation Solved
 
 On December 28, 1978, United Airlines Flight 173 ran out of fuel and crashed near Portland, Oregon. Ten people died. The aircraft was airworthy. The crew was experienced. The cause was not mechanical failure. The cause was a breakdown in crew communication and task management — the flight engineer failed to adequately communicate the fuel state, and the captain failed to respond to it.
